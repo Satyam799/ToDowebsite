@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: 	rgb(0, 255, 191);
-
+    background-image: url('./assets//night-forest_1308-69877.avif');
+    background-size: cover;
 }
 

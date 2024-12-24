@@ -84,17 +84,25 @@ margin-left: 5%;
     width: 100%;
     overflow-y:scroll;
     height: 98%;
+    background-image: url('./assets/image.png');
+    background-size: cover;
+
 }
 
 .box{
     width: 90%;
-    height: 60px;
+    min-height: 60px;
+    max-height: auto;    
     box-shadow: 0 0 12px 2px rgba(0, 0, 0,0.2);
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
     padding: 0 30px;
     align-items: center;
+    background-color: white;
+    gap: 10px;
+
+
 }
 
 
