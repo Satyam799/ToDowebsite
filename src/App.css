@@ -1,13 +1,24 @@
 .App{
-    width: 100%;
-    min-height: 100vh;
+    width: 800px;
+    min-height: 90vh;
+    margin: 20px auto;
+    border: 5px solid rgb(0, 191, 255);
+    border-radius: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 100px auto 50px;
+    justify-items: center;
+    position: relative;
+
+
 }
 
 .Header{
     width: 100%;
     height: 100px;
     background: black;
-   
+    /* border-radius: 10px; */
+
 }
 
 .dlist{
@@ -18,6 +29,7 @@
     justify-content: center;
     align-items: center;
     display: flex;
+    
 }
 
 .logo{
@@ -33,4 +45,155 @@
 .image{
     width: 25%;
     height: 25%;
+}
+
+.othersentence{
+display: flex;
+height: 50px;
+justify-content: flex-start;
+align-items: center;
+margin-left: 5%;
+}
+
+
+
+.headersentence{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: blanchedalmond;
+    font-size: auto;
+}
+
+.styling{
+    padding: 7px;
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+
+.mainscreen{
+    width: 100%;
+    overflow-y:scroll;
+    height: 98%;
+}
+
+.box{
+    width: 90%;
+    height: 60px;
+    box-shadow: 0 0 12px 2px rgba(0, 0, 0,0.2);
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+}
+
+
+
+.list{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 20px;
+}
+
+
+.Absolute{
+    color: blue;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: transparent;
+    position: absolute;
+    bottom:80px;
+    right:50px;
+}
+
+
+@media(max-height:300px){
+
+    .App{
+        height: 300px;
+    }    
+ 
+}
+
+.Modal{
+   width: 100%;
+   height: 100%;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent overlay */
+
+}
+.container{
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media (max-width:900px){
+    .App{
+        width: 500px;
+    }
+
+    .Absolute{
+        right: 0;
+        bottom: 60px;
+    }
+  
+}
+@media (max-width:600px){
+    .App{
+        width: 250px;
+  
+    }
+   
+  
+       .Modal{
+        width: auto;
+        height: 200px;
+
+       }
+       .container{
+        width: 100%;
+        height: 50%;
+       }
+}
+
+ /* @media(max-width:1500px){
+    .App{
+        width: 800px;
+        min-height: 1000px;
+    }
+}  */
+
+.hide{
+  display: none;
+}
+
+.done{
+   text-decoration: line-through; 
+}
+
+.image2{
+    width: 24px;
+    height: 24px;
+
 }

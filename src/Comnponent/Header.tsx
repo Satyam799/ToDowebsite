@@ -3,6 +3,7 @@ import image from "../assets/check.png";
 export default function Header() {
   return (
     <div className="Header">
+        <div  className="styling">
       <div className="dlist">
         <p className="logo">
           2D
@@ -12,6 +13,7 @@ export default function Header() {
       </div>
       <div className="othersentence">
         <p className="headersentence">You Probable have somthing to do</p>
+      </div>
       </div>
     </div>
   );
