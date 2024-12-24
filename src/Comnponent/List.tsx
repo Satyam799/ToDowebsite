@@ -1,8 +1,14 @@
 import { useDispatch, useSelector } from "react-redux"
 import { TodoListDone } from "../Store/Todoslice"
 import image from "../assets/check.png";
+import React from "react";
+import { Rootstate } from "../Screen/All";
 
-export default function List({el}) {
+interface elememnt{
+  el:string
+}
+
+const List : React.FC<elememnt>=({el})=>{
  const dispatch=useDispatch()
  function handellist(e){
     e.preventDefault()
@@ -11,7 +17,7 @@ export default function List({el}) {
     }
   }
 
-const {Done}=useSelector((state)=>state.Todo)
+const {Done}=useSelector((state:Rootstate)=>state.Todo)
 
 const completed=Done.find((ele)=>el===ele)
 const nowDone=window.location.pathname==='/done'
@@ -24,3 +30,5 @@ const nowDone=window.location.pathname==='/done'
     </div>
   )
 }
+
+export default List

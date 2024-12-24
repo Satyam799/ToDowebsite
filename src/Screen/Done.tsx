@@ -4,15 +4,19 @@ import Modal from "../Comnponent/Modal";
 import { useState } from "react";
 import { TodostateAll } from "../Store/Todoslice";
 import { useNavigate } from "react-router-dom";
-export default function Done() {
-  const { Done } = useSelector((state) => state.Todo);
+import { Rootstate } from "./All";
+
+
+
+export const Done :React.FC =()=>{
+  const { Done } = useSelector((state:Rootstate) => state.Todo);
   const [hide, sethide] = useState(false);
   const [text,settext]=useState('')
   const dispath=useDispatch()
   const navigate=useNavigate()
 
 
-  function handelsubmit (e){
+  function handelsubmit (e:React.FormEvent<HTMLFormElement>|React.MouseEvent<HTMLButtonElement>){
     e.preventDefault()
     dispath(TodostateAll(text))
     sethide(false)
@@ -36,3 +40,5 @@ export default function Done() {
   );
   
 }
+
+export default Done

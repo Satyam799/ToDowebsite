@@ -1,9 +1,11 @@
 import {createSlice} from '@reduxjs/toolkit'
 
+type New=(string)[]
+
 const initialState={
-    All:[],
-    inprogress:[],
-    Done:[]
+    All:[] as New,
+    inprogress:[] as New,
+    Done:[] as New
 }
 
 const Todoslice=createSlice({
