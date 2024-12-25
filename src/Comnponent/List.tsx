@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import { TodoListDone } from "../Store/Todoslice"
 import image from "../assets/check.png";
-import React from "react";
+import React, { MouseEvent } from "react";
 import { Rootstate } from "../Screen/All";
 
 interface elememnt{
@@ -10,7 +10,7 @@ interface elememnt{
 
 const List : React.FC<elememnt>=({el})=>{
  const dispatch=useDispatch()
- function handellist(e){
+ function handellist(e:MouseEvent<HTMLDivElement> ){
     e.preventDefault()
     if(!completed){
     dispatch(TodoListDone(el))
@@ -24,7 +24,7 @@ const nowDone=window.location.pathname==='/done'
 
   return (
     <div className={`box ${completed && !nowDone ? 'done':''}`} onClick={handellist}>
-        {el}
+        <p className="stylingt">{el}</p>
         {completed && !nowDone && <img src={image} alt="img"  className="image2"/> }
 
     </div>

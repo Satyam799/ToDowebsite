@@ -11,7 +11,7 @@ const Modal:React.FC<Modalx>=({text,settext,handelsubmit,sethide})=>{
   return (
       <form className="container" onSubmit={handelsubmit}>
         <p>Please enter the content</p>
-        <textarea type="text" placeholder="Please eneter you Todo" value={text} onChange={((e)=>settext(e.target.value))}/>
+        <textarea  placeholder="Please eneter you Todo" value={text} onChange={((e)=>settext(e.target.value))}/>
         <div className="buttons">
           <button type='submit' onClick={handelsubmit}>Submit</button>
           <button onClick={()=>{
