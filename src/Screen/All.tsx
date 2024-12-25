@@ -34,7 +34,7 @@ export const All :React.FC =()=>{
   return (
     <>
       <div className={`Modal ${hide ? '' :'hide'}`}>
-        <Modal settext={settext} value={value} text={text} sethide={sethide} handelsubmit={handelsubmit}/>
+        <Modal settext={settext}  text={text} sethide={sethide} handelsubmit={handelsubmit} value={value}/>
       </div>
       <div className={`list ${!hide ? '' :'hide'}`}>
         {All?.map((el,i) => {
