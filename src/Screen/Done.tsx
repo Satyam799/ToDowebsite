@@ -18,6 +18,8 @@ export const Done :React.FC =()=>{
 
   function handelsubmit (e:React.FormEvent<HTMLFormElement>|React.MouseEvent<HTMLButtonElement>){
     e.preventDefault()
+    if(text==='')return 
+
     dispath(TodostateAll(text))
     sethide(false)
     settext('')

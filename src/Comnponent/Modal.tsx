@@ -5,16 +5,17 @@ interface Modalx{
   settext:React.Dispatch<React.SetStateAction<string>>,
   handelsubmit:(e:React.FormEvent<HTMLFormElement>|React.MouseEvent<HTMLButtonElement>)=>void,
   sethide:React.Dispatch<React.SetStateAction<boolean>>
+  value:React.RefObject<HTMLTextAreaElement>
 }
 
-const Modal:React.FC<Modalx>=({text,settext,handelsubmit,sethide})=>{
+const Modal:React.FC<Modalx>=({text,settext,handelsubmit,sethide,value})=>{
   return (
       <form className="container" onSubmit={handelsubmit}>
         <p>Please enter the content</p>
-        <textarea className="area" placeholder="Please eneter you Todo" value={text} onChange={((e)=>settext(e.target.value))}/>
+        <textarea ref={value} className="area" placeholder="Please eneter you Todo" value={text} onChange={((e)=>settext(e.target.value))}/>
         <div className="buttons">
           <button type='submit' onClick={handelsubmit}>Submit</button>
-          <button onClick={()=>{
+          <button type='button' onClick={()=>{
             sethide(false)
             settext('')
 
